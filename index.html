@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Disappearance of Amelia Earhart (1937) — Archival Dossier</title>
+<meta name="description" content="A complete standalone HTML dossier in English: the disappearance of Amelia Earhart and Fred Noonan on July 2, 1937 over the Pacific Ocean. Route, «Itasca» radio intercepts, a blueprint of the Lockheed Electra 10E, hypotheses." />
+<style>
+  :root {
+    --bg: #F5F0E6;
+    --card: #FCF9F2;
+    --chart: #EAE3D2;
+    --ink: #1C1B18;
+    --muted: #5A554C;
+    --faint: #8C857B;
+    --line: #D8D0C0;
+    --line-strong: #C5BBA8;
+    --crimson: #B83A2D;
+    --navy: #1D3557;
+    --brass: #A67C37;
+    --green: #2E5A44;
+    --amber: #B57B24;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(rgba(140,133,123,.09) 1px, transparent 0);
+    background-size: 28px 28px;
+    font-family: Georgia, 'PT Serif', 'Times New Roman', serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .mono {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .tag {
+    display: inline-block;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: .74rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    font-weight: 700;
+  }
+  .hair { border: 0; border-top: 1px solid var(--line); margin: 0; }
+  /* ===== Sticky nav ===== */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245,240,230,.96);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.nav .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 54px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: ui-monospace, Menlo, monospace; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--ink); text-decoration: none; }
+  .brand i { width: 9px; height: 9px; border-radius: 50%; background: var(--crimson); display: inline-block; }
+  header.nav nav { display: flex; gap: 18px; font-family: system-ui, sans-serif; font-size: .82rem; font-weight: 500; }
+  header.nav nav a { color: var(--muted); text-decoration: none; }
+  header.nav nav a:hover { color: var(--ink); }
+  .offline-badge {
+    font-family: ui-monospace, Menlo, monospace; font-size: .68rem; letter-spacing: .06em;
+    border: 1px solid var(--green); color: var(--green); padding: 4px 9px; text-transform: uppercase; white-space: nowrap;
+  }
+  @media (max-width: 900px) { header.nav nav { display: none; } }
+  /* ===== Hero ===== */
+  .hero { padding: 46px 0 44px; border-bottom: 1px solid var(--line); }
+  .hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 38px; align-items: center; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
+  h1 { font-family: Georgia, 'Playfair Display', serif; font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.08; margin: 14px 0 8px; font-weight: 700; letter-spacing: -.01em; }
+  .subtitle { font-family: Georgia, serif; font-style: italic; font-size: 1.25rem; color: var(--muted); margin: 0 0 22px; }
+  .lead { font-size: 1.06rem; max-width: 46rem; margin: 0; }
+  .lead em { color: var(--crimson); font-style: italic; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: system-ui, sans-serif; font-size: .88rem; font-weight: 500;
+    padding: 11px 18px; text-decoration: none; cursor: pointer; border: 1px solid var(--ink);
+    background: var(--ink); color: var(--card); transition: background .15s, color .15s;
+  }
+  .btn:hover { background: var(--navy); border-color: var(--navy); }
+  .btn.ghost { background: var(--card); color: var(--ink); border-color: var(--line-strong); }
+  .btn.ghost:hover { background: var(--chart); }
+  .frame { background: var(--card); border: 1px solid var(--line-strong); padding: 14px; }
+  .frame-head { display: flex; justify-content: space-between; gap: 10px; font-family: ui-monospace, Menlo, monospace; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); padding-bottom: 9px; margin-bottom: 9px; border-bottom: 1px solid var(--line); }
+  .frame-head b { color: var(--navy); }
+  .frame img { display: block; width: 100%; height: 300px; object-fit: cover; border: 1px solid var(--line); filter: sepia(.18) contrast(1.04); }
+  .frame figcaption { font-family: ui-monospace, Menlo, monospace; font-size: .7rem; line-height: 1.6; color: var(--muted); margin-top: 11px; }
+  .frame figcaption b { color: var(--ink); }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); background: var(--card); margin-top: 40px; }
+  .metrics div { padding: 16px 18px; border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+  .metrics span { display: block; font-family: ui-monospace, Menlo, monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+  .metrics b { display: block; font-family: ui-monospace, Menlo, monospace; font-size: 1.4rem; margin-top: 5px; }
+  .metrics small { color: var(--muted); font-size: .78rem; }
+  @media (max-width: 760px) { .metrics { grid-template-columns: 1fr 1fr; } }
+  /* ===== Sections ===== */
+  section.chapter { padding: 56px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 66px; }
+  .chapter h2 { font-family: Georgia, 'Playfair Display', serif; font-size: clamp(1.6rem, 3.4vw, 2.35rem); font-weight: 600; line-height: 1.2; margin: 6px 0 14px; }
+  .chapter .intro { color: var(--muted); font-size: 1.02rem; max-width: 48rem; margin: 0 0 30px; }
+  /* Map frame */
+  .map-shell { border: 1px solid var(--line-strong); background: var(--chart); }
+  .map-bar { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 8px 14px; background: #E2D9C5; border-bottom: 1px solid var(--line-strong); font-family: ui-monospace, Menlo, monospace; font-size: .68rem; color: var(--muted); }
+  .map-bar b { color: var(--navy); font-weight: 600; }
+  .map-body { background-color: var(--chart); background-image: linear-gradient(to right, rgba(29,53,87,.065) 1px, transparent 1px), linear-gradient(to bottom, rgba(29,53,87,.065) 1px, transparent 1px); background-size: 36px 36px; }
+  .map-body svg { display: block; width: 100%; height: auto; }
+  .map-legend { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; padding: 10px 14px; background: #E7DFCD; border-top: 1px solid var(--line-strong); font-family: ui-monospace, Menlo, monospace; font-size: .68rem; color: var(--muted); }
+  .map-legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .sw-solid { width: 20px; height: 2px; background: var(--navy); }
+  .sw-dash { width: 20px; height: 0; border-top: 2px dashed var(--crimson); }
+  .sw-dot { width: 20px; height: 0; border-top: 2px dotted var(--faint); }
+  /* Route table */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--card); margin-top: 26px; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 880px; }
+  th, td { border: 1px solid var(--line); padding: 11px 13px; text-align: left; vertical-align: top; }
+  thead th { background: var(--chart); font-family: ui-monospace, Menlo, monospace; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--ink); }
+  tbody tr:nth-child(even) { background: #FAF6EC; }
+  td.num { font-family: ui-monospace, Menlo, monospace; font-size: .78rem; color: var(--faint); white-space: nowrap; }
+  td b { display: block; }
+  td small { color: var(--muted); }
+  .pill { display: inline-block; font-family: ui-monospace, Menlo, monospace; font-size: .64rem; letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border: 1px solid; }
+  .pill.done { color: var(--green); border-color: rgba(46,90,68,.35); background: rgba(46,90,68,.1); }
+  .pill.dep { color: var(--navy); border-color: rgba(29,53,87,.35); background: rgba(29,53,87,.1); }
+  .pill.lost { color: var(--crimson); border-color: rgba(184,58,45,.4); background: rgba(184,58,45,.1); }
+  .pill.hyp { color: #8A5A10; border-color: rgba(181,123,36,.45); background: rgba(181,123,36,.14); }
+  .pill.un { color: var(--muted); border-color: rgba(140,133,123,.4); background: rgba(140,133,123,.14); }
+  /* Two column layout */
+  .cols { display: grid; grid-template-columns: 4fr 8fr; gap: 30px; align-items: start; }
+  @media (max-width: 960px) { .cols { grid-template-columns: 1fr; } }
+  aside.card, article.card { background: var(--card); border: 1px solid var(--line); padding: 20px; }
+  aside.stack { display: flex; flex-direction: column; gap: 22px; }
+  /* Radio timeline */
+  .timeline { border-left: 2px solid #C8BFA8; padding-left: 22px; display: flex; flex-direction: column; gap: 22px; margin-left: 8px; }
+  .log { position: relative; background: var(--card); border: 1px solid var(--line); padding: 20px 22px; }
+  .log.crit { border-color: rgba(184,58,45,.55); }
+  .log > i.dot { position: absolute; left: -30px; top: 24px; width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--card); background: var(--navy); }
+  .log.crit > i.dot { background: var(--crimson); }
+  .log.search > i.dot { background: var(--amber); }
+  .log-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding-bottom: 11px; margin-bottom: 13px; border-bottom: 1px solid var(--line); font-family: ui-monospace, Menlo, monospace; font-size: .74rem; }
+  .log-meta .t { display: inline-flex; gap: 7px; align-items: center; font-weight: 600; color: var(--ink); background: var(--chart); padding: 2px 8px; }
+  .log.crit .log-meta .t { background: var(--crimson); color: var(--card); }
+  .log-meta .g { color: var(--faint); }
+  .log-meta .f { color: var(--navy); font-weight: 500; }
+  .meter { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+  .meter i { display: block; width: 5px; background: var(--line); }
+  .meter i.on { background: var(--navy); }
+  .meter.max i.on { background: var(--crimson); }
+  .log h3 { font-family: Georgia, serif; font-size: 1.2rem; margin: 4px 0 10px; line-height: 1.35; }
+  .who { font-family: ui-monospace, Menlo, monospace; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+  blockquote { margin: 14px 0; padding: 13px 16px; background: var(--bg); border-left: 3px solid var(--navy); font-style: italic; font-size: .99rem; }
+  .log.crit blockquote { background: #F7EFE8; border-left-color: var(--crimson); }
+  blockquote .orig { display: block; margin-top: 9px; padding-top: 9px; border-top: 1px solid var(--line); font-style: normal; font-family: ui-monospace, Menlo, monospace; font-size: .7rem; color: var(--muted); }
+  .log p.note { color: var(--muted); font-size: .95rem; margin: 0; }
+  /* Blueprint */
+  .specs { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); background: var(--card); margin-bottom: 24px; }
+  .specs div { padding: 12px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .specs span { display: block; font-family: ui-monospace, Menlo, monospace; font-size: .63rem; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
+  .specs b { display: block; font-family: ui-monospace, Menlo, monospace; font-size: .78rem; margin-top: 4px; }
+  @media (max-width: 900px) { .specs { grid-template-columns: 1fr 1fr 1fr; } }
+  .bp-shell { border: 1px solid var(--line-strong); background-color: #F8F4EA; background-image: linear-gradient(to right, rgba(29,53,87,.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(29,53,87,.07) 1px, transparent 1px), linear-gradient(to right, rgba(29,53,87,.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(29,53,87,.03) 1px, transparent 1px); background-size: 72px 72px, 72px 72px, 18px 18px, 18px 18px; }
+  .bp-head, .bp-foot { padding: 9px 14px; font-family: ui-monospace, Menlo, monospace; font-size: .68rem; color: var(--navy); background: rgba(239,233,218,.85); }
+  .bp-head { border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; }
+  .bp-foot { border-top: 1px solid var(--line); }
+  .bp-shell svg { display: block; width: 100%; height: auto; }
+  details.node { background: var(--card); border: 1px solid var(--line); }
+  details.node + details.node { margin-top: 10px; }
+  details.node summary { cursor: pointer; padding: 13px 18px; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+  details.node summary::-webkit-details-marker { display: none; }
+  details.node summary::after { content: '＋'; font-family: ui-monospace, monospace; color: var(--faint); }
+  details.node[open] summary::after { content: '－'; }
+  details.node summary:hover { background: #FAF6EC; }
+  details.node summary .code { font-family: ui-monospace, Menlo, monospace; font-size: .68rem; font-weight: 700; color: var(--navy); letter-spacing: .07em; }
+  details.node summary .name { font-family: Georgia, serif; font-size: 1.03rem; font-weight: 600; flex: 1 1 260px; }
+  details.node .body { padding: 0 18px 18px; }
+  details.node .body p { font-size: .95rem; margin: 0 0 10px; }
+  details.node .kv { font-family: ui-monospace, Menlo, monospace; font-size: .74rem; background: var(--bg); border: 1px solid var(--line); padding: 9px 12px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+  details.node .impact { background: #F7EFE8; border-left: 3px solid var(--crimson); padding: 12px 14px; font-size: .93rem; }
+  details.node .impact b { display: block; font-family: ui-monospace, Menlo, monospace; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--crimson); margin-bottom: 5px; }
+  .st { font-family: ui-monospace, Menlo, monospace; font-size: .64rem; letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border: 1px solid; }
+  .st.crit { color: var(--crimson); border-color: rgba(184,58,45,.35); background: rgba(184,58,45,.1); }
+  .st.mod { color: var(--navy); border-color: rgba(29,53,87,.3); background: rgba(29,53,87,.1); }
+  .st.std { color: var(--green); border-color: rgba(46,90,68,.3); background: rgba(46,90,68,.1); }
+  /* Theories */
+  .theory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 26px; }
+  @media (max-width: 960px) { .theory-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .theory-grid { grid-template-columns: 1fr; } }
+  details.theory { background: var(--card); border: 1px solid var(--line); }
+  details.theory[open] { border-color: var(--ink); }
+  details.theory > summary { cursor: pointer; list-style: none; padding: 16px; }
+  details.theory > summary::-webkit-details-marker { display: none; }
+  details.theory > summary .row { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  details.theory > summary .row span { font-family: ui-monospace, Menlo, monospace; font-size: .66rem; font-weight: 700; color: var(--faint); }
+  details.theory > summary .row em { font-family: ui-monospace, Menlo, monospace; font-style: normal; font-size: .63rem; padding: 2px 6px; border: 1px solid; }
+  details.theory h3 { font-family: Georgia, serif; font-size: 1.08rem; margin: 0; line-height: 1.35; }
+  details.theory > summary .badge { margin-top: 11px; padding-top: 9px; border-top: 1px solid var(--line); font-family: ui-monospace, Menlo, monospace; font-size: .68rem; color: var(--muted); }
+  details.theory .inner { padding: 0 16px 18px; }
+  .theory-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; background: var(--bg); border: 1px solid var(--line); padding: 14px; margin-bottom: 16px; font-family: ui-monospace, Menlo, monospace; font-size: .73rem; }
+  .theory-meta span { display: block; font-size: .63rem; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 3px; }
+  .theory-meta b { font-weight: 500; color: var(--ink); }
+  .theory .inner > p { font-size: .99rem; }
+  .ev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 18px 0; }
+  @media (max-width: 760px) { .ev-grid { grid-template-columns: 1fr; } .theory-meta { grid-template-columns: 1fr; } }
+  .ev { padding: 16px; }
+  .ev.pro { background: #F5F7F4; border: 1px solid rgba(46,90,68,.25); }
+  .ev.con { background: #FAF3F0; border: 1px solid rgba(184,58,45,.25); }
+  .ev h4 { margin: 0 0 12px; font-family: ui-monospace, Menlo, monospace; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+  .ev.pro h4 { color: var(--green); }
+  .ev.con h4 { color: var(--crimson); }
+  .ev ol { margin: 0; padding-left: 20px; }
+  .ev li { font-size: .93rem; margin-bottom: 10px; }
+  .verdict { background: var(--chart); border-left: 4px solid var(--navy); padding: 15px 18px; font-size: .97rem; }
+  .verdict b { font-family: ui-monospace, Menlo, monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); display: block; margin-bottom: 5px; }
+  /* Crew & legacy */
+  .crew { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media (max-width: 800px) { .crew { grid-template-columns: 1fr; } }
+  .crew article { background: var(--card); border: 1px solid var(--line); padding: 24px; }
+  .crew .head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--line); font-family: ui-monospace, Menlo, monospace; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+  .crew .head b { color: var(--crimson); }
+  .crew article:last-child .head b { color: var(--navy); }
+  .crew h3 { font-family: Georgia, serif; font-size: 1.5rem; margin: 0 0 6px; }
+  .crew .sub { font-family: ui-monospace, Menlo, monospace; font-size: .72rem; color: var(--muted); margin: 0 0 14px; }
+  .crew p { font-size: .96rem; }
+  .quote { background: var(--chart); border: 1px solid var(--line-strong); padding: 34px; margin: 34px 0; }
+  .quote blockquote { margin: 0; padding: 0; border: 0; background: none; font-family: Georgia, serif; font-style: italic; font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.55; color: var(--ink); }
+  .quote .sign { margin-top: 14px; font-family: ui-monospace, Menlo, monospace; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .legacy { display: grid; grid-template-columns: 7fr 5fr; gap: 22px; }
+  @media (max-width: 800px) { .legacy { grid-template-columns: 1fr; } }
+  .legacy h4 { font-family: ui-monospace, Menlo, monospace; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 12px; }
+  .legacy .exp h4 { color: var(--navy); }
+  .legacy .src h4 { color: var(--faint); }
+  .legacy p { font-size: .95rem; }
+  .legacy ul { margin: 0; padding-left: 18px; }
+  .legacy li { font-family: ui-monospace, Menlo, monospace; font-size: .74rem; color: var(--muted); margin-bottom: 10px; line-height: 1.65; }
+  /* Footer */
+  footer { background: var(--chart); border-top: 1px solid var(--line-strong); padding: 38px 0; }
+  .foot { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+  .foot .t { font-family: ui-monospace, Menlo, monospace; font-size: .72rem; letter-spacing: .07em; text-transform: uppercase; font-weight: 700; }
+  .foot p { margin: 6px 0 0; font-size: .88rem; color: var(--muted); max-width: 46rem; }
+  @media print {
+    body { background: #fff; }
+    header.nav, .actions, .no-print { display: none !important; }
+    section.chapter { break-inside: avoid; padding: 18px 0; }
+    details { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap bar">
+    <a class="brand" href="#top"><i></i>Dossier NR16020 <span style="color:#8C857B;font-weight:400">• Pacific Ocean, 1937</span></a>
+    <nav>
+      <a href="#route">Route &amp; Map</a>
+      <a href="#chronology">«Itasca» Radio Log</a>
+      <a href="#electra">Electra 10E Aircraft</a>
+      <a href="#theories">Hypotheses</a>
+      <a href="#legacy">Crew</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <!-- ================= HERO ================= -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="tag">Archival dossier • standalone HTML edition in English</span>
+          <h1>The Disappearance of Amelia Earhart</h1>
+          <p class="subtitle">The last dawn over the Pacific, July 2, 1937</p>
+          <p class="lead">
+            In the twentieth hour of her nonstop flight from New Guinea to the tiny coral island of Howland
+            lost in the middle of the Pacific, Amelia Earhart's voice burst into the radio room of the US Coast Guard
+            cutter «Itasca» at maximum strength: <em>«We must be on you, but we cannot see you — gas is running low.»</em>
+            An hour later, the twin-engine Lockheed Electra with Earhart and navigator Fred Noonan dissolved forever
+            between sky and water, leaving the greatest mystery in the history of world aviation.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#route">Explore the navigator's chart</a>
+            <a class="btn ghost" href="#chronology">Radio intercepts 07:42–08:43</a>
+            <a class="btn ghost" href="#theories">Four hypotheses</a>
+          </div>
+        </div>
+        <figure class="frame">
+          <div class="frame-head"><span>Expedition photo archive • June–July 1937</span><b>Call sign KHAQQ</b></div>
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Crect width='640' height='480' fill='%23EAE3D2'/%3E%3Ccircle cx='150' cy='130' r='46' fill='%23F3EDE0' stroke='%23A67C37' stroke-width='2'/%3E%3Cpath d='M60 300 q120 -80 260 -40 q180 45 300 -20 l0 60 l-560 0z' fill='%23D5CCB8' stroke='%238C857B' stroke-width='2'/%3E%3Cpath d='M170 250 l300 -46 l30 26 l-320 44z' fill='%23FCF9F2' stroke='%231D3557' stroke-width='3'/%3E%3Cpath d='M250 246 l330 -48 l14 12 l-330 46z' fill='%23F3EDE0' stroke='%231D3557' stroke-width='3'/%3E%3Cline x1='250' y1='244' x2='246' y2='150' stroke='%231D3557' stroke-width='5'/%3E%3Cline x1='580' y1='198' x2='586' y2='112' stroke='%231D3557' stroke-width='5'/%3E%3Ctext x='60' y='80' font-family='monospace' font-size='17' fill='%235A554C'%3ELOCKHEED 10E ELECTRA%3C/text%3E%3Ctext x='60' y='104' font-family='monospace' font-size='15' fill='%238C857B'%3ENR16020 %3C/text%3E%3C/svg%3E" alt="Schematic of the Lockheed Electra 10E aircraft against a dawn ocean backdrop" />
+          <figcaption><b>Lockheed 10E Electra aircraft (NR16020).</b> Amelia Earhart before departure on the equatorial leg of her round-the-world route. Behind her — 35,405 km of the journey through South America, Africa, India, and Australia.</figcaption>
+        </figure>
+      </div>
+      <div class="metrics">
+        <div><span>Date of lost contact</span><b>July 2, 1937</b><small>08:43 (cutter «Itasca» time)</small></div>
+        <div><span>Distance covered to Lae</span><b>35,405 km</b><small>22,000 miles • 78% of the around-the-world route</small></div>
+        <div><span>Last radio channel</span><b>3,105 kHz</b><small>Call sign KHAQQ • signal level S5</small></div>
+        <div><span>Noonan's solar azimuth</span><b>157°–337°</b><small>Celestial line of position at dawn</small></div>
+      </div>
+    </div>
+  </div>
+  <!-- ================= 1. ROUTE ================= -->
+  <section class="chapter" id="route">
+    <div class="wrap">
+      <span class="tag">Sheet No. 01 • Cartographic reconstruction of the flight</span>
+      <h2>From Miami to the 157°–337° line of position</h2>
+      <p class="intro">
+        Below is the navigator's chart of the final Pacific leg (Lae — Nauru — Howland Island — Nikumaroro Atoll)
+        and a complete table of all 15 control points of the 1937 equatorial round-the-world route.
+      </p>
+      <div class="map-shell">
+        <div class="map-bar"><span>Chart No. 104-P • Lae — Howland Island section (2,221 nautical miles)</span><b>Aircraft NR16020 • Lockheed 10E</b></div>
+        <div class="map-body">
+          <svg viewBox="0 0 1000 460" role="img" aria-label="Navigator's chart of the final leg: Lae — Howland Island — Nikumaroro Atoll">
+            <rect x="0" y="0" width="1000" height="460" fill="#DDE4E2" fill-opacity="0.45"/>
+            <!-- graticule -->
+            <g stroke="#8C857B" stroke-width="0.6" stroke-dasharray="2 4" stroke-opacity="0.4">
+              <line x1="40" y1="72" x2="965" y2="72"/><line x1="40" y1="136" x2="965" y2="136"/>
+              <line x1="40" y1="264" x2="965" y2="264"/><line x1="40" y1="328" x2="965" y2="328"/>
+              <line x1="40" y1="392" x2="965" y2="392"/>
+            </g>
+            <line x1="40" y1="200" x2="965" y2="200" stroke="#1D3557" stroke-width="1.1" stroke-dasharray="6 4" stroke-opacity="0.55"/>
+            <g font-family="monospace" font-size="10" fill="#6E685F">
+              <text x="46" y="67">08° N</text><text x="46" y="131">04° N</text>
+              <text x="46" y="195" fill="#1D3557">EQUATOR 00°</text><text x="46" y="259">04° S</text>
+              <text x="46" y="323">08° S</text><text x="46" y="387">12° S</text>
+            </g>
+            <g stroke="#8C857B" stroke-width="0.6" stroke-dasharray="2 4" stroke-opacity="0.35">
+              <line x1="106" y1="25" x2="106" y2="435"/><line x1="294" y1="25" x2="294" y2="435"/>
+              <line x1="481" y1="25" x2="481" y2="435"/><line x1="669" y1="25" x2="669" y2="435"/><line x1="856" y1="25" x2="856" y2="435"/>
+            </g>
+            <line x1="762" y1="25" x2="762" y2="435" stroke="#A67C37" stroke-width="1.3" stroke-dasharray="8 4" stroke-opacity="0.75"/>
+            <g font-family="monospace" font-size="10" fill="#6E685F">
+              <text x="110" y="38">145° E</text><text x="298" y="38">155° E</text><text x="485" y="38">165° E</text>
+              <text x="673" y="38">175° E</text><text x="766" y="38" fill="#8A6220">180° DATE LINE</text><text x="860" y="38">175° W</text>
+            </g>
+            <!-- landmasses -->
+            <path d="M 40,265 L 85,270 L 128,284 L 156,304 L 142,315 L 178,332 L 210,356 L 192,368 L 135,348 L 95,352 L 40,345 Z" fill="#D5CCB8" stroke="#7D7466" stroke-width="1.2"/>
+            <text x="58" y="330" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#5A554C">New Guinea</text>
+            <path d="M 195,288 Q 225,282 246,265 L 254,273 Q 230,295 198,296 Z" fill="#D5CCB8" stroke="#7D7466" stroke-width="1"/>
+            <path d="M 235,248 L 268,262 L 263,268 L 231,253 Z" fill="#D5CCB8" stroke="#7D7466" stroke-width="0.9"/>
+            <path d="M 294,292 L 315,306 L 309,312 L 289,297 Z M 334,316 L 358,330 L 353,335 L 330,321 Z M 372,338 L 395,352 L 390,357 L 367,343 Z" fill="#D5CCB8" stroke="#7D7466" stroke-width="0.9"/>
+            <text x="295" y="346" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#6E685F">Solomon Is.</text>
+            <g fill="#7D7466"><circle cx="625" cy="168" r="2.6"/><circle cx="632" cy="180" r="2.6"/><circle cx="640" cy="194" r="2.6"/><circle cx="650" cy="208" r="2.6"/></g>
+            <text x="615" y="157" font-family="Georgia, serif" font-size="10" fill="#5A554C">Gilbert Is.</text>
+            <circle cx="611" cy="102" r="3.5" fill="none" stroke="#8C857B" stroke-width="1.2"/>
+            <circle cx="568" cy="106" r="3" fill="none" stroke="#8C857B" stroke-width="1"/>
+            <text x="550" y="90" font-family="monospace" font-size="10" fill="#6E685F">Marshall Is. (Mili Atoll)</text>
+            <!-- search sector -->
+            <rect x="725" y="115" width="185" height="195" fill="#1D3557" fill-opacity="0.05" stroke="#1D3557" stroke-width="1" stroke-dasharray="5 3" stroke-opacity="0.6"/>
+            <text x="732" y="129" font-family="monospace" font-size="9.5" fill="#1D3557">US NAVY SEARCH AREA (250,000 SQ. MILES)</text>
+            <circle cx="826" cy="187" r="72" fill="#B83A2D" fill-opacity="0.04" stroke="#1D3557" stroke-width="0.9" stroke-dasharray="3 3"/>
+            <circle cx="826" cy="187" r="26" fill="#B83A2D" fill-opacity="0.11" stroke="#B83A2D" stroke-width="1.1"/>
+            <text x="854" y="175" font-family="monospace" font-size="9.5" fill="#B83A2D">S5 SIGNAL RADIUS (~50 MILES)</text>
+            <!-- sun line -->
+            <line x1="766" y1="52" x2="914" y2="386" stroke="#B83A2D" stroke-width="2" stroke-dasharray="8 5"/>
+            <line x1="802" y1="133" x2="868" y2="104" stroke="#A67C37" stroke-width="1.3" stroke-dasharray="2 2"/>
+            <circle cx="874" cy="101" r="5" fill="#A67C37" fill-opacity="0.25" stroke="#A67C37" stroke-width="1.2"/>
+            <text x="883" y="104" font-family="monospace" font-size="9.5" fill="#8A6220">SUNRISE (AZIMUTH 067°)</text>
+            <g transform="translate(747,74) rotate(66)"><text font-family="monospace" font-size="10.5" font-weight="600" fill="#B83A2D">LINE OF POSITION 337° — 157°</text></g>
+            <!-- routes -->
+            <path d="M 655,192 Q 635,148 611,105" fill="none" stroke="#8C857B" stroke-width="1.1" stroke-dasharray="3 4"/>
+            <line x1="144" y1="308" x2="517" y2="208" stroke="#1D3557" stroke-width="2.4"/>
+            <line x1="517" y1="208" x2="826" y2="187" stroke="#B83A2D" stroke-width="2.2" stroke-dasharray="7 4"/>
+            <circle cx="829" cy="199" r="2.2" fill="#5A554C"/>
+            <text x="836" y="205" font-family="Georgia, serif" font-size="9" fill="#5A554C">Baker I.</text>
+            <!-- waypoints -->
+            <g font-family="monospace" font-size="10.5">
+              <g><circle cx="144" cy="308" r="5" fill="#1D3557" stroke="#FCF9F2" stroke-width="1.8"/>
+                <rect x="140" y="318" width="124" height="18" fill="#FCF9F2" fill-opacity="0.88" stroke="#D8D0C0" stroke-width="0.8"/>
+                <text x="146" y="330">11. LAE (START)</text></g>
+              <g><circle cx="517" cy="208" r="5" fill="#1D3557" stroke="#FCF9F2" stroke-width="1.8"/>
+                <rect x="513" y="218" width="124" height="18" fill="#FCF9F2" fill-opacity="0.88" stroke="#D8D0C0" stroke-width="0.8"/>
+                <text x="519" y="230">12. NAURU ISLAND</text></g>
+              <g><circle cx="826" cy="187" r="6.5" fill="#B83A2D" stroke="#FCF9F2" stroke-width="1.8"/>
+                <circle cx="826" cy="187" r="11" fill="none" stroke="#B83A2D" stroke-width="1.4"/>
+                <rect x="822" y="197" width="132" height="18" fill="#FCF9F2" fill-opacity="0.88" stroke="#D8D0C0" stroke-width="0.8"/>
+                <text x="828" y="209">13. HOWLAND ISLAND</text></g>
+              <g><circle cx="865" cy="275" r="5" fill="#B57B24" stroke="#FCF9F2" stroke-width="1.8"/>
+                <rect x="861" y="285" width="150" height="18" fill="#FCF9F2" fill-opacity="0.88" stroke="#D8D0C0" stroke-width="0.8"/>
+                <text x="867" y="297">14. NIKUMARORO</text></g>
+            </g>
+            <!-- compass rose -->
+            <g transform="translate(430,365)">
+              <circle r="34" fill="#FCF9F2" fill-opacity="0.6" stroke="#8C857B" stroke-width="0.8"/>
+              <circle r="28" fill="none" stroke="#8C857B" stroke-width="0.5" stroke-dasharray="2 2"/>
+              <polygon points="0,-30 4,-6 0,-10 -4,-6" fill="#B83A2D"/><polygon points="0,30 4,6 0,10 -4,6" fill="#1D3557"/>
+              <polygon points="30,0 6,4 10,0 6,-4" fill="#1D3557"/><polygon points="-30,0 -6,4 -10,0 -6,-4" fill="#1D3557"/>
+              <text x="-3.5" y="-35" font-family="monospace" font-size="10" font-weight="bold" fill="#B83A2D">N</text>
+              <text x="-3.5" y="43" font-family="monospace" font-size="9" fill="#5A554C">S</text>
+              <text x="35" y="3" font-family="monospace" font-size="9" fill="#5A554C">E</text>
+              <text x="-43" y="3" font-family="monospace" font-size="9" fill="#5A554C">W</text>
+            </g>
+            <!-- scale bar -->
+            <g transform="translate(560,418)" font-family="monospace" font-size="9.5" fill="#5A554C">
+              <line x1="0" y1="0" x2="112" y2="0" stroke="#1C1B18" stroke-width="1.5"/>
+              <line x1="0" y1="-4" x2="0" y2="4" stroke="#1C1B18" stroke-width="1.5"/>
+              <line x1="56" y1="-3" x2="56" y2="3" stroke="#1C1B18" stroke-width="1"/>
+              <line x1="112" y1="-4" x2="112" y2="4" stroke="#1C1B18" stroke-width="1.5"/>
+              <text x="0" y="14">0</text><text x="44" y="14">180</text><text x="86" y="14">360 MILES</text>
+            </g>
+          </svg>
+        </div>
+        <div class="map-legend">
+          <span><i class="sw-solid"></i>Route flown (35,405 km)</span>
+          <span><i class="sw-dash"></i>Final course and the 157°–337° line</span>
+          <span><i class="sw-dot"></i>Unreached / disputed segment</span>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption class="mono" style="caption-side:top;text-align:left;padding:10px 13px;font-size:.72rem;color:#8C857B;background:#FCF9F2;border-bottom:1px solid #D8D0C0">
+            TABLE 1. WAYPOINTS OF THE EQUATORIAL CIRCUMNAVIGATION ROUTE (JUNE – JULY 1937)
+          </caption>
+          <thead>
+            <tr><th>No.</th><th>Waypoint</th><th>Coordinates</th><th>Date</th><th>From start</th><th>Status and historical summary</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num">01</td><td><b>Miami, Florida</b><small>USA • official start</small></td><td class="num">25°47′ N, 80°17′ W</td><td class="num">Jun 1, 1937</td><td class="num">0 km</td>
+              <td><span class="pill done">Completed</span><br><small>At 05:56 the Electra NR16020 lifted off the Miami runway. Before departure, the 76-meter long-wave trailing antenna for 500 kHz was removed — a decision that would prove fatal at Howland.</small></td></tr>
+            <tr><td class="num">02</td><td><b>San Juan → Caracas</b><small>Caribbean basin and Venezuela</small></td><td class="num">18°27′ N, 66°06′ W</td><td class="num">Jun 1–2</td><td class="num">2,450 km</td>
+              <td><span class="pill done">Completed</span><br><small>Navigator Fred Noonan, former chief navigator of Pan American clippers, calibrates the three onboard chronometers before entering equatorial latitudes.</small></td></tr>
+            <tr><td class="num">03</td><td><b>Paramaribo → Natal</b><small>Suriname and Brazil</small></td><td class="num">05°47′ S, 35°12′ W</td><td class="num">Jun 3–6</td><td class="num">7,150 km</td>
+              <td><span class="pill done">Completed</span><br><small>950 gallons loaded for the night jump across the South Atlantic; at Natal — service of the Pratt &amp; Whitney Wasp engines.</small></td></tr>
+            <tr><td class="num">04</td><td><b>Saint-Louis / Dakar</b><small>French West Africa</small></td><td class="num">16°01′ N, 16°29′ W</td><td class="num">Jun 7–9</td><td class="num">10,320 km</td>
+              <td><span class="pill done">Completed</span><br><small>A flawless South Atlantic crossing (3,100 km) in 13 h 12 min. Because of dusty haze Noonan took a northward correction to guarantee landfall.</small></td></tr>
+            <tr><td class="num">05</td><td><b>Gao → Fort-Lamy</b><small>Central Africa, Chad</small></td><td class="num">12°08′ N, 15°03′ E</td><td class="num">Jun 10–12</td><td class="num">14,180 km</td>
+              <td><span class="pill done">Completed</span><br><small>Flight across the scorched Sahara (+43 °C) along poorly charted routes; riverbeds and caravan trails served as landmarks.</small></td></tr>
+            <tr><td class="num">06</td><td><b>El Fasher → Assab</b><small>Sudan and Eritrea, Red Sea</small></td><td class="num">13°00′ N, 42°44′ E</td><td class="num">Jun 13–14</td><td class="num">17,350 km</td>
+              <td><span class="pill done">Completed</span><br><small>The African continent crossed from ocean to Red Sea. Earhart decides to forgo the planned stopover in Arabia.</small></td></tr>
+            <tr><td class="num">07</td><td><b>Karachi</b><small>British India</small></td><td class="num">24°54′ N, 67°09′ E</td><td class="num">Jun 15–16</td><td class="num">20,580 km</td>
+              <td><span class="pill done">Completed</span><br><small>The first direct flight in history from the Red Sea to India (1,744 miles). Imperial Airways mechanics check the mixture control and spark plugs.</small></td></tr>
+            <tr><td class="num">08</td><td><b>Calcutta → Bangkok</b><small>Bengal, Burma and Siam</small></td><td class="num">13°54′ N, 100°36′ E</td><td class="num">Jun 17–20</td><td class="num">25,100 km</td>
+              <td><span class="pill done">Completed</span><br><small>A dramatic struggle with the summer monsoon: a wall of rain twice forced a return to Rangoon; water tore paint from the wing.</small></td></tr>
+            <tr><td class="num">09</td><td><b>Singapore → Bandung</b><small>Java, Dutch East Indies</small></td><td class="num">06°54′ S, 107°35′ E</td><td class="num">Jun 21–27</td><td class="num">27,950 km</td>
+              <td><span class="pill done">Completed</span><br><small>A five-day unscheduled stop: repair of the fuel-flow instruments and radio equipment; Earhart endures a bout of dysentery.</small></td></tr>
+            <tr><td class="num">10</td><td><b>Port Darwin</b><small>Northern Territory, Australia</small></td><td class="num">12°25′ S, 130°52′ E</td><td class="num">Jun 28</td><td class="num">31,100 km</td>
+              <td><span class="pill done">Completed</span><br><small>Parachutes shipped home by steamer — useless over the ocean, and every kilogram turns into minutes of engine run time.</small></td></tr>
+            <tr><td class="num">11</td><td><b>Lae, New Guinea</b><small>the last point on land</small></td><td class="num">06°44′ S, 146°59′ E</td><td class="num">Jun 29 – Jul 2</td><td class="num">35,405 km</td>
+              <td><span class="pill dep">Final departure</span><br><small>At 10:00 on July 2 (00:00 GMT), at maximum takeoff weight, the aircraft lifted off 50 m short of the cliff into the sea. Due to interference Noonan could not calibrate the chronometers: a 1-minute time error = 15 miles of longitude miss.</small></td></tr>
+            <tr><td class="num">12</td><td><b>Abeam Nauru Island</b><small>nighttime landmark</small></td><td class="num">00°31′ S, 166°55′ E</td><td class="num">Jul 2, ~22:30</td><td class="num">37,720 km</td>
+              <td><span class="pill done">Confirmed</span><br><small>The Nauru operator picked up Earhart's voice on 3105 kHz: «Aircraft visible... Nauru lights ahead.» Beyond lay nearly another 1,000 miles of water through the Gilbert Islands and the date line.</small></td></tr>
+            <tr><td class="num">13</td><td><b>Howland Island</b><small>refueling target • cutter «Itasca»</small></td><td class="num">00°48′ N, 176°37′ W</td><td class="num">Jul 2, 07:42–08:43</td><td class="num">39,518 km</td>
+              <td><span class="pill lost">Contact lost • S5</span><br><small>A flat coral islet 2.4 × 0.8 km and 6 m high. «Itasca» receives the S5 signal and makes black smoke from her boilers, but the aircraft never reaches the island. At 08:43 — the last transmission: «We are on the line 157–337... running north and south.»</small></td></tr>
+            <tr><td class="num">14</td><td><b>Nikumaroro Atoll</b><small>Phoenix Islands • the 157° ray</small></td><td class="num">04°40′ S, 174°31′ W</td><td class="num">hypothesis Jul 2–6</td><td class="num">40,160 km</td>
+              <td><span class="pill hyp">Hypothetical limit</span><br><small>An uninhabited atoll 350 miles SE of Howland, exactly on the extension of the 157°–337° line. In 1940, 13 human bones, women's shoes, and a box from a marine sextant were found here.</small></td></tr>
+            <tr><td class="num">15</td><td><b>Honolulu → Auckland</b><small>the unreached finale</small></td><td class="num">21°18′ N, 157°51′ W → 37°48′ N, 122°16′ W</td><td class="num">plan Jul 3–4</td><td class="num">47,000 km</td>
+              <td><span class="pill un">Unreached</span><br><small>Two final legs through Hawaii to California that would have completed the first equatorial flight around the globe. At Howland, drums of US Navy gasoline awaited the crew.</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- ================= 2. RADIO ================= -->
+  <section class="chapter" id="chronology">
+    <div class="wrap">
+      <span class="tag">Sheet No. 02 • Radio room transcript of USCGC «Itasca»</span>
+      <h2>The morning of July 2, 1937: voices in a one-way air</h2>
+      <p class="intro">
+        The US Coast Guard cutter «Itasca» awaited the aircraft off the western shore of Howland Island. Chief radioman Leo
+        Bellarts heard Amelia Earhart's voice at thunderous volume, but due to a fatal mismatch of frequencies and antennas
+        the crew of the Electra was flying practically blind.
+      </p>
+      <div class="cols">
+        <aside class="stack">
+          <div class="card">
+            <span class="tag" style="color:#B83A2D">Anatomy of the radio trap</span>
+            <h3 style="font-family:Georgia,serif;font-size:1.25rem;margin:8px 0 12px">Three reasons for loss of contact at the target</h3>
+            <p style="font-size:.94rem;color:#5A554C"><b style="color:#1C1B18">1. Incompatible direction finders.</b> Earhart transmitted voice on 3105 kHz, while «Itasca»'s marine DF set operated only on long waves up to 550 kHz.</p>
+            <p style="font-size:.94rem;color:#5A554C"><b style="color:#1C1B18">2. The DF loop's blindness on 7500 kHz.</b> When «Itasca» replied on 7500 kHz, the airborne loop antenna of the Electra physically could not produce an angular null on such a short wave.</p>
+            <p style="font-size:.94rem;color:#5A554C;margin:0"><b style="color:#1C1B18">3. A 30-minute time-zone offset.</b> The ship kept watch on ship's time GMT−11:30, while the crew used Greenwich time, so receiving and transmitting sessions overlapped.</p>
+          </div>
+          <div class="card">
+            <span class="tag" style="color:#1D3557">Key frequencies on July 2</span>
+            <table style="min-width:0;font-size:.82rem;margin-top:12px">
+              <tbody>
+                <tr><td class="num">3105 kHz</td><td><small>Earhart's night/morning voice frequency (30 m)</small></td></tr>
+                <tr><td class="num">6210 kHz</td><td><small>Daytime frequency she promised to switch to (but never did)</small></td></tr>
+                <tr><td class="num">7500 kHz</td><td><small>«Itasca»'s reply, unreadable by the Electra's loop</small></td></tr>
+                <tr><td class="num">500 kHz</td><td><small>International maritime distress channel — antenna removed in Miami</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+        <div class="timeline">
+          <article class="log">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">21:30 (Jul 1)</span> <span class="g">00:00 GMT</span> <span class="f">3105 / 6210 kHz</span></span><span class="mono" style="font-size:.7rem;color:#8C857B">Outside «Itasca» range</span></div>
+            <div class="who">Lae Airfield (New Guinea) • July 2, 1937, 10:00 local</div>
+            <h3>Heavy takeoff of the Lockheed Electra NR16020 over Huon Gulf</h3>
+            <blockquote>«Amelia Earhart departed Lae at 00:00 GMT bound for Howland Island. Takeoff normal, headwind.»
+              <span class="orig">“Amelia Earhart departed Lae 0000 GMT for Howland Island.”</span></blockquote>
+            <p class="note">The aircraft weighed more than 7 tonnes at takeoff (including 4,164 liters of gasoline). The estimated nonstop flight time was 18–19.5 hours; the maximum fuel endurance with ideal mixture leaning was about 20–21 hours.</p>
+          </article>
+          <article class="log">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">02:45</span> <span class="g">15:15 GMT</span> <span class="f">3105 kHz</span></span><span class="mono" style="font-size:.7rem;color:#5A554C"><span class="meter"><i class="on" style="height:20%"></i><i style="height:40%"></i><i style="height:60%"></i><i style="height:80%"></i><i style="height:100%"></i></span> S1 • at the noise floor</span></div>
+            <div class="who">Radio room of USCGC «Itasca» • night of July 2</div>
+            <h3>First fragments of a voice signal through tropical thunderstorm static</h3>
+            <blockquote>«...cloudy and overcast... [static]... KHAQQ...»
+              <span class="orig">“...cloudy and overcast... [static]... KHAQQ...”</span></blockquote>
+            <p class="note">Chief radioman Leo Bellarts first catches Earhart's call sign. Every half hour the ship transmits the Morse signal «A» and weather reports on 7500 and 425 kHz, but there is no reply from the aircraft.</p>
+          </article>
+          <article class="log">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">06:14</span> <span class="g">18:44 GMT</span> <span class="f">3105 kHz</span></span><span class="mono" style="font-size:.7rem;color:#5A554C"><span class="meter"><i class="on" style="height:20%"></i><i class="on" style="height:40%"></i><i class="on" style="height:60%"></i><i style="height:80%"></i><i style="height:100%"></i></span> S3 • readable</span></div>
+            <div class="who">Amelia Earhart → «Itasca» • dawn</div>
+            <h3>Request for a radio bearing at roughly 200 miles by dead reckoning</h3>
+            <blockquote>«Itasca, this is KHAQQ... Please take a bearing on us and report back... I will whistle into the microphone... We are approximately two hundred miles out.»
+              <span class="orig">“Want to take a bearing on us and report in half hour. I will make noise in microphone — about 200 miles out.”</span></blockquote>
+            <p class="note">A fatal planning error: Earhart whistles into the microphone for just a few seconds, unaware that the experimental US Navy high-frequency DF set on Howland has dead batteries and cannot catch such a short transmission, while the shipboard DF of «Itasca» works only up to 550 kHz.</p>
+          </article>
+          <article class="log">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">06:45</span> <span class="g">19:15 GMT</span> <span class="f">3105 kHz</span></span><span class="mono" style="font-size:.7rem;color:#5A554C"><span class="meter"><i class="on" style="height:20%"></i><i class="on" style="height:40%"></i><i class="on" style="height:60%"></i><i class="on" style="height:80%"></i><i style="height:100%"></i></span> S4 • loud</span></div>
+            <div class="who">Amelia Earhart → «Itasca» • morning</div>
+            <h3>Repeat bearing request: crew believes 100 miles remain to the island</h3>
+            <blockquote>«Please take a bearing on us and report in half an hour. I will make noise in the mic. About one hundred miles out.»
+              <span class="orig">“Please take bearing on us and report in half hour. I will make noise in mic. About 100 miles out.”</span></blockquote>
+            <p class="note">The signal strengthens rapidly, but communication remains entirely one-way. Earhart transmits strictly at :15 and :45 of each hour according to her own schedule, yet for some reason does not hear the powerful transmitter of «Itasca» — probably because of the mismatch between ship time (GMT−11:30) and the Greenwich scale.</p>
+          </article>
+          <article class="log crit">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">07:42</span> <span class="g">20:12 GMT</span> <span class="f">3105 kHz</span></span><span class="mono" style="font-size:.7rem;color:#B83A2D;font-weight:600"><span class="meter max"><i class="on" style="height:20%"></i><i class="on" style="height:40%"></i><i class="on" style="height:60%"></i><i class="on" style="height:80%"></i><i class="on" style="height:100%"></i></span> S5 • maximum strength</span></div>
+            <div class="who">Amelia Earhart → «Itasca» • the critical hour</div>
+            <h3>«We must be right over you but cannot see you — fuel is running low»</h3>
+            <blockquote>«KHAQQ calling Itasca. We must be on you but cannot see you — gas is running low. Been unable to reach you by radio. We are flying at 1,000 feet.»
+              <span class="orig">“KHAQQ calling Itasca. We must be on you but cannot see you — gas is running low. Been unable to reach you by radio. We are flying at 1,000 feet.”</span></blockquote>
+            <p class="note">Earhart's voice thunders in the radio operators' headphones so loudly (S5 out of 5) as if the aircraft were just beyond the horizon — within 25–60 miles. «Itasca»'s commander Warner Thompson orders the oil boilers forced, raising a multi-kilometer column of thick black smoke over the ocean, but the horizon is empty.</p>
+          </article>
+          <article class="log crit">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">07:58</span> <span class="g">20:28 GMT</span> <span class="f">3105 ←→ 7500 kHz</span></span><span class="mono" style="font-size:.7rem;color:#B83A2D;font-weight:600"><span class="meter max"><i class="on" style="height:20%"></i><i class="on" style="height:40%"></i><i class="on" style="height:60%"></i><i class="on" style="height:80%"></i><i class="on" style="height:100%"></i></span> S5 • maximum strength</span></div>
+            <div class="who">Amelia Earhart → «Itasca» • the only two-way contact</div>
+            <h3>Earhart hears «Itasca» on 7500 kHz for the first time, but cannot determine direction</h3>
+            <blockquote>«KHAQQ calling Itasca. We are receiving your signals, but unable to get a minimum. Please take bearing on us and answer 3105 with voice.»
+              <span class="orig">“KHAQQ calling Itasca. We are receiving your signals, but unable to get a minimum. Please take bearing on us and answer 3105 with voice.”</span></blockquote>
+            <p class="note">A physical trap: the Bendix loop antenna on the cabin roof of the Electra was designed for 200–1500 kHz. On the short 7500 kHz wave the wavelength is too small, so rotating the loop produced no «null minimum» — the «Itasca» signal sounded equally loud from all directions.</p>
+          </article>
+          <article class="log crit">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">08:43</span> <span class="g">21:13 GMT</span> <span class="f">3105 kHz</span></span><span class="mono" style="font-size:.7rem;color:#B83A2D;font-weight:600"><span class="meter max"><i class="on" style="height:20%"></i><i class="on" style="height:40%"></i><i class="on" style="height:60%"></i><i class="on" style="height:80%"></i><i class="on" style="height:100%"></i></span> S5 • very loud, cut off</span></div>
+            <div class="who">Amelia Earhart → «Itasca» • last signal in the air</div>
+            <h3>Last confirmed transmission: «We are on the line 157–337... running north and south»</h3>
+            <blockquote>«KHAQQ to Itasca: We are on the line 157 337. Will repeat this message. Will repeat this on 6210 kilocycles. Wait.» [after a few seconds, again on 3105 kHz]: «We are running on line north and south.»
+              <span class="orig">“KHAQQ to Itasca: We are on the line 157 337. Will repeat this message. Will repeat this on 6210 kilocycles. Wait... We are running on line north and south.”</span></blockquote>
+            <p class="note">Extreme tension is audible in Earhart's voice. Noonan has computed from the morning sun's altitude (azimuth 67° NE) a celestial line of position perpendicular to 157°–337°. Knowing the line passes through Howland but not whether they are north or south of the island, the crew began a desperate search along it up and down. The transmission on 6210 kHz never came.</p>
+          </article>
+          <article class="log search">
+            <i class="dot"></i>
+            <div class="log-meta"><span><span class="t">10:40 (Jul 2) – Jul 18</span> <span class="g">23:10 GMT+</span> <span class="f">3105 / 6210 kHz</span></span><span class="mono" style="font-size:.7rem;color:#5A554C"><span class="meter"><i class="on" style="height:20%"></i><i class="on" style="height:40%"></i><i style="height:60%"></i><i style="height:80%"></i><i style="height:100%"></i></span> disputed post-crash signals</span></div>
+            <div class="who">USCGC «Itasca», battleship «Colorado», carrier «Lexington»</div>
+            <h3>Massive search across 250,000 sq. miles and the phenomenon of nighttime radio intercepts</h3>
+            <blockquote>Logs of Howland, Baker, Honolulu, and amateur radio stations (July 2–6): faint carrier waves on 3105 kHz and fragments of words «...KHAQQ... water... help...» only during low tide.
+              <span class="orig">Carrier waves and fragmented voice calls logged on 3105 kHz and harmonic 6210 kHz across July 2–6 before falling permanently silent.</span></blockquote>
+            <p class="note">If the Electra sank in the ocean, the transmitter died instantly. Yet for 4 days Pan American stations (capable of taking bearings) recorded faint signals on 3105 kHz whose crossings converged in the Phoenix Islands area. The aircraft could only have transmitted from the ground on the reef during low tide, starting the right engine with its generator. On July 19 President Roosevelt officially ended the search.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= 3. AIRCRAFT ================= -->
+  <section class="chapter" id="electra">
+    <div class="wrap">
+      <span class="tag" style="color:#1D3557">Sheet No. 03 • Engineering audit of aircraft NR16020</span>
+      <h2>The «flying laboratory» Lockheed Model 10E Electra</h2>
+      <p class="intro">
+        Built in Burbank, California, with financial backing from Purdue University, this all-metal monoplane was considered
+        the pinnacle of 1937 aviation. Open the nodes of the drawing to understand how the structural modifications
+        affected the fatal flight.
+      </p>
+      <div class="specs">
+        <div><span>Variant</span><b>Lockheed 10E Special</b></div>
+        <div><span>Aircraft / call sign</span><b>NR16020 / KHAQQ</b></div>
+        <div><span>Powerplant</span><b>2 × Wasp S3H1 (1,100 hp)</b></div>
+        <div><span>Tank capacity</span><b>1,151 gallons (4,357 L)</b></div>
+        <div><span>Cruise speed</span><b>240–265 km/h (135 kt)</b></div>
+        <div><span>Maximum range</span><b>~4,500 miles (7,240 km)</b></div>
+      </div>
+      <div class="bp-shell">
+        <div class="bp-head"><span>Drawing L-10E-1937 • longitudinal section and antenna layout</span><span>scale 1:48</span></div>
+        <svg viewBox="0 0 820 340" role="img" aria-label="Drawing of the Lockheed Electra 10E aircraft with six technical nodes">
+          <g stroke="#1D3557" stroke-opacity="0.45" stroke-width="0.9"><line x1="95" y1="292" x2="732" y2="292"/><line x1="95" y1="285" x2="95" y2="299"/><line x1="732" y1="285" x2="732" y2="299"/></g>
+          <text x="335" y="308" fill="#1D3557" font-size="10" font-family="monospace">FUSELAGE LENGTH: 11.76 M (38 FT 7 IN)</text>
+          <line x1="236" y1="146" x2="236" y2="112" stroke="#1D3557" stroke-width="2"/>
+          <line x1="236" y1="114" x2="695" y2="92" stroke="#1D3557" stroke-width="1.4"/>
+          <path d="M 728,176 Q 768,184 808,202" fill="none" stroke="#B83A2D" stroke-width="1.3" stroke-dasharray="4 4"/>
+          <text x="648" y="224" fill="#B83A2D" font-size="9" font-family="monospace">REMOVED 500 kHz WIRE</text>
+          <path d="M 185,220 Q 390,242 652,199" fill="none" stroke="#1D3557" stroke-width="1.3" stroke-dasharray="6 3"/>
+          <circle cx="205" cy="132" r="11" fill="none" stroke="#1D3557" stroke-width="2.4"/>
+          <line x1="205" y1="143" x2="205" y2="152" stroke="#1D3557" stroke-width="2.2"/>
+          <path d="M 96,192 C 98,175 130,164 172,160 L 198,147 L 255,145 L 675,157 L 730,173 L 728,181 L 652,198 L 380,220 L 190,220 C 138,218 98,208 96,192 Z" fill="#FCF9F2" stroke="#1D3557" stroke-width="2.2"/>
+          <polygon points="176,161 198,150 226,150 226,166 176,166" fill="#DCE4E5" stroke="#1D3557" stroke-width="1.4"/>
+          <line x1="202" y1="150" x2="202" y2="166" stroke="#1D3557" stroke-width="1.2"/>
+          <path d="M 656,166 L 722,168 L 724,175 L 656,175 Z" fill="#EAE3D2" stroke="#1D3557" stroke-width="1.6"/>
+          <path d="M 678,132 C 680,100 695,88 712,90 C 726,92 732,110 732,148 C 732,182 722,198 706,198 C 690,198 678,176 678,132 Z" fill="#F3EDE0" stroke="#1D3557" stroke-width="2"/>
+          <line x1="706" y1="90" x2="706" y2="198" stroke="#1D3557" stroke-width="1.1" stroke-dasharray="3 2"/>
+          <text x="612" y="153" fill="#1D3557" font-size="9.5" font-weight="700" font-family="monospace">NR16020</text>
+          <g fill="#A67C37" fill-opacity="0.16" stroke="#8A6220" stroke-width="1.3">
+            <rect x="330" y="160" width="42" height="44" rx="3"/><rect x="378" y="160" width="42" height="44" rx="3"/>
+            <rect x="426" y="160" width="42" height="44" rx="3"/><rect x="474" y="160" width="42" height="42" rx="3"/>
+            <rect x="522" y="162" width="38" height="38" rx="3"/>
+          </g>
+          <text x="344" y="156" fill="#8A6220" font-size="8.5" font-family="monospace">AUX CABIN TANKS (1,151 GAL.)</text>
+          <rect x="592" y="164" width="18" height="13" rx="2" fill="#DCE4E5" stroke="#1D3557" stroke-width="1.3"/>
+          <rect x="616" y="164" width="18" height="13" rx="2" fill="#DCE4E5" stroke="#1D3557" stroke-width="1.3"/>
+          <line x1="585" y1="184" x2="642" y2="184" stroke="#1D3557" stroke-width="1.6"/>
+          <path d="M 250,196 L 368,204 L 358,217 L 250,215 Z" fill="#EAE3D2" stroke="#1D3557" stroke-width="1.8"/>
+          <rect x="224" y="174" width="64" height="46" rx="8" fill="#F3EDE0" stroke="#1D3557" stroke-width="2"/>
+          <polygon points="214,193 224,189 224,205 214,201" fill="#1D3557"/>
+          <line x1="217" y1="146" x2="217" y2="248" stroke="#1D3557" stroke-width="3.2" stroke-linecap="round"/>
+          <line x1="262" y1="220" x2="262" y2="250" stroke="#1D3557" stroke-width="2.2"/>
+          <circle cx="262" cy="256" r="14" fill="#EAE3D2" stroke="#1D3557" stroke-width="2.2"/><circle cx="262" cy="256" r="5" fill="#1D3557"/>
+          <line x1="686" y1="194" x2="692" y2="208" stroke="#1D3557" stroke-width="1.8"/>
+          <circle cx="694" cy="212" r="5.5" fill="#EAE3D2" stroke="#1D3557" stroke-width="1.8"/>
+          <g font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">
+            <g><circle cx="255" cy="198" r="11" fill="#FCF9F2" stroke="#1D3557" stroke-width="2"/><text x="255" y="202" fill="#1D3557">1</text></g>
+            <g><circle cx="465" cy="184" r="11" fill="#FCF9F2" stroke="#1D3557" stroke-width="2"/><text x="465" y="188" fill="#1D3557">2</text></g>
+            <g><circle cx="205" cy="132" r="11" fill="#FCF9F2" stroke="#B83A2D" stroke-width="2"/><text x="205" y="136" fill="#B83A2D">3</text></g>
+            <g><circle cx="545" cy="122" r="11" fill="#FCF9F2" stroke="#B83A2D" stroke-width="2"/><text x="545" y="126" fill="#B83A2D">4</text></g>
+            <g><circle cx="390" cy="235" r="11" fill="#FCF9F2" stroke="#B83A2D" stroke-width="2"/><text x="390" y="239" fill="#B83A2D">5</text></g>
+            <g><circle cx="625" cy="168" r="11" fill="#FCF9F2" stroke="#2E5A44" stroke-width="2"/><text x="625" y="172" fill="#2E5A44">6</text></g>
+          </g>
+        </svg>
+        <div class="bp-foot">SOURCE: FACTORY SPECIFICATION LOCKHEED AIRCRAFT CORP. (ORDER No. 1055) AND REPORT BY RADIO ENGINEER J. McKINLEY</div>
+      </div>
+      <div style="margin-top:22px">
+        <details class="node" open>
+          <summary><span class="code">NODE A-01</span><span class="name">Pratt &amp; Whitney R-1340 Wasp S3H1 engines</span><span class="st mod">Upgraded power</span></summary>
+          <div class="body">
+            <div class="kv"><span>CRUISE FUEL CONSUMPTION:</span><b>43–48 gal/hr (both engines)</b></div>
+            <p>Unlike the standard passenger Electras (10A, 450 hp each), the 10E variant was powered by high-altitude Wasp S3H1 engines of 550 hp and Hamilton Standard constant-speed propellers. The right engine drove the sole onboard 50-ampere generator.</p>
+            <div class="impact"><b>Role in the events of July 2, 1937</b>During a forced landing on a coral reef, the spinning right propeller would have allowed the radio's batteries to be recharged until the tidal water reached the propeller hub.</div>
+          </div>
+        </details>
+        <details class="node">
+          <summary><span class="code">NODE B-02</span><span class="name">Six auxiliary fuselage fuel tanks</span><span class="st mod">Converted from 10-seat cabin</span></summary>
+          <div class="body">
+            <div class="kv"><span>FUEL LOADED AT LAE:</span><b>1,100 gallons (~4,164 L)</b></div>
+            <p>Ten passenger seats were removed, and almost the whole cabin volume was occupied by huge aluminum fuel tanks. Only a narrow crawlway over the tanks connected the cockpit to Fred Noonan's navigation table — the pilot and navigator had to pass notes on a bamboo pole with a clothespin.</p>
+            <div class="impact"><b>Role in the events of July 2, 1937</b>The lack of direct voice and visual contact between Earhart and Noonan in the critical minutes of the Howland search sharply slowed the exchange of coordinates and frequency changes.</div>
+          </div>
+        </details>
+        <details class="node">
+          <summary><span class="code">NODE C-03</span><span class="name">Bendix RA-1 loop radio direction finder (above the cabin)</span><span class="st crit">Incompatible with 7500 kHz</span></summary>
+          <div class="body">
+            <div class="kv"><span>OPERATING DF RANGE:</span><b>200 – 1,430 kHz (effective)</b></div>
+            <p>A metal loop above the cabin allowed the pilot to rotate the antenna until the signal's «null minimum» disappeared, determining the exact bearing to the station. However, the receiver with its new coupler had five switchable bands and worked poorly above 1,500 kHz.</p>
+            <div class="impact"><b>Role in the events of July 2, 1937</b>At 07:58 that morning Earhart heard «Itasca»'s transmission on 7500 kHz, but the wavelength (40 meters) caused resonance with the metal fuselage — the direction finder gave no null («unable to get a minimum»), robbing the crew of a life-saving compass vector.</div>
+          </div>
+        </details>
+        <details class="node">
+          <summary><span class="code">NODE D-04</span><span class="name">Upper V-shaped transmitting antenna and the removed 500 kHz trailing wire</span><span class="st crit">Loss of the marine DF channel</span></summary>
+          <div class="body">
+            <div class="kv"><span>REMOVED IN MIAMI:</span><b>76-meter trailing antenna, 500 kHz</b></div>
+            <p>The top antenna wire stretched from the mast above the cabin to the two tail fins. The international maritime distress and DF frequency of 500 kHz required unreeling a 76-meter copper wire from the tail in flight. Tired of hand-reeling it, Earhart left the long-wave equipment behind on the ground.</p>
+            <div class="impact"><b>Role in the events of July 2, 1937</b>The standard marine radio direction finder of the cutter «Itasca» worked perfectly on exactly 500 kHz! Had the trailing antenna been aboard, «Itasca»'s radio operators would have given Earhart an exact course to the island in 30 seconds.</div>
+          </div>
+        </details>
+        <details class="node">
+          <summary><span class="code">NODE E-05</span><span class="name">Lower receiving wire antenna under the fuselage</span><span class="st crit">Likely torn off during takeoff at Lae</span></summary>
+          <div class="body">
+            <div class="kv"><span>CLEARANCE AT FULL LOAD:</span><b>less than 35 cm</b></div>
+            <p>The Bendix receiver was connected to the lower wire antenna beneath the fuselage. Eyewitnesses at the dirt airfield of Lae (and analysis of the newsreel of the final takeoff) pointed to the sagging of the heavily loaded aircraft on the bumps and a possible puff of dust from a broken wire.</p>
+            <div class="impact"><b>Role in the events of July 2, 1937</b>If the lower receiving antenna broke during the takeoff run at Lae, this fully explains why Earhart's transmitter (upper V-antenna) thundered into «Itasca» at 5 by 5, yet she herself heard almost nothing in reply for hours.</div>
+          </div>
+        </details>
+        <details class="node">
+          <summary><span class="code">NODE F-06</span><span class="name">Fred Noonan's navigator compartment and astro hatch</span><span class="st std">Computed the 157°–337° line</span></summary>
+          <div class="body">
+            <div class="kv"><span>1937 CELESTIAL NAVIGATION ACCURACY:</span><b>±10–25 nautical miles after 18 h of flight</b></div>
+            <p>Behind the fuel tanks, at a small cabin window, lay the table of navigator Fred Noonan — the man who had laid out Pan Am's transpacific air routes. In flight a bubble sextant allowed him to take star and morning sun sights without a visible horizon.</p>
+            <div class="impact"><b>Role in the events of July 2, 1937</b>At dawn a single sun sight gives not a point on the chart but only one straight line of position (157°–337°). To obtain a second intersecting line, one had to wait for noon or catch a radio bearing from «Itasca».</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- ================= 4. THEORIES ================= -->
+  <section class="chapter" id="theories">
+    <div class="wrap">
+      <span class="tag">Sheet No. 04 • Historical and forensic examination of hypotheses</span>
+      <h2>Four hypotheses of the disappearance: facts versus legends</h2>
+      <p class="intro">
+        For nearly nine decades the fate of crew NR16020 has spawned both serious oceanographic and archaeological
+        expeditions and loud hoaxes. Open each hypothesis and weigh the arguments.
+      </p>
+      <div class="theory-grid">
+        <details class="theory" open>
+          <summary>
+            <div class="row"><span>HYPOTHESIS I</span><em style="color:#2E5A44;border-color:rgba(46,90,68,.35)">~60% of historians</em></div>
+            <h3>Sinking near Howland</h3>
+            <div class="badge">Main academic consensus</div>
+          </summary>
+          <div class="inner">
+            <div class="theory-meta">
+              <div><span>Geographic attribution</span><b>35–100 miles NW of Howland (depth 5,200 m)</b></div>
+              <div><span>Authors and expeditions</span><b>US Navy commission, E. Long, Nauticos</b></div>
+            </div>
+            <p>After 19–20 hours of struggling with a headwind and the absence of a two-way radio bearing, the aircraft found itself several dozen miles (most likely to the northwest) from the tiny flat island. Shortly after the last transmission at 08:43, both engines stopped from complete fuel exhaustion, and the Electra ditched in the open ocean.</p>
+            <div class="ev-grid">
+              <div class="ev pro"><h4>Facts and evidence «FOR»</h4><ol>
+                <li>Earhart's direct words at 07:42: «Gas is running low» — by 08:43 the aircraft had been in the air over 20 hours.</li>
+                <li>The S5 signal at «Itasca» proves proximity to Howland (no farther than 50–80 miles).</li>
+                <li>The all-metal machine with empty tanks could have stayed afloat only for minutes.</li>
+              </ol></div>
+              <div class="ev con"><h4>Counterarguments</h4><ol>
+                <li>Does not explain over 100 radio intercepts on 3105 kHz from July 2 to 6.</li>
+                <li>Sonar scans of the seabed (Nauticos 2002–2017, the Deep Sea Vision anomaly 2024) found no wreckage.</li>
+              </ol></div>
+            </div>
+            <div class="verdict"><b>Final conclusion of the archival examination</b>The version most rigorous under Occam's razor: it requires no additional assumption beyond the actual exhaustion of fuel near the island invisible in the sun's glare.</div>
+          </div>
+        </details>
+        <details class="theory">
+          <summary>
+            <div class="row"><span>HYPOTHESIS II</span><em style="color:#1D3557;border-color:rgba(29,53,87,.35)">13 expeditions</em></div>
+            <h3>Castaways of Nikumaroro</h3>
+            <div class="badge">Strong circumstantial basis</div>
+          </summary>
+          <div class="inner">
+            <div class="theory-meta">
+              <div><span>Geographic attribution</span><b>Nikumaroro Atoll (Phoenix Islands), 350 miles SE</b></div>
+              <div><span>Authors and expeditions</span><b>TIGHAR (R. Gillespie), anthropologist R. Jantz</b></div>
+            </div>
+            <p>Having failed to find Howland along the northern segment of the line of position, the crew turned along it southeast toward the Phoenix Islands. Two to two and a half hours later, on the last drops of fuel, Earhart landed the Electra on a wide, smooth, low-tide-dried coral reef of an uninhabited atoll, from which they signaled for help for several nights until the surf washed the aircraft into the abyss.</p>
+            <div class="ev-grid">
+              <div class="ev pro"><h4>Facts and evidence «FOR»</h4><ol>
+                <li>The atoll lies exactly on the 157° azimuth from Howland — the literal continuation of Earhart's last phrase.</li>
+                <li>The schedule of nighttime post-crash signals coincides with low tide at Nikumaroro reef.</li>
+                <li>In 1940, 13 bones, a 1930s woman's shoe, a sextant box, and a Bénédictine bottle were found; a 2018 reanalysis matched Amelia more closely than 99% of the sample population.</li>
+              </ol></div>
+              <div class="ev con"><h4>Counterarguments</h4><ol>
+                <li>Was there enough fuel for another 2.5–3 hours of flight after the words «gas is running low»?</li>
+                <li>On July 9, seaplanes from the battleship «Colorado» flew over the island and noticed neither aircraft nor people.</li>
+              </ol></div>
+            </div>
+            <div class="verdict"><b>Final conclusion of the archival examination</b>The only alternative theory that rests on the real navigational geometry of the 157°–337° line, on Pan Am radio bearings, and on the 1940 finds documented in the British colonial archive.</div>
+          </div>
+        </details>
+        <details class="theory">
+          <summary>
+            <div class="row"><span>HYPOTHESIS III</span><em style="color:#8A5A10;border-color:rgba(181,123,36,.45)">disputed</em></div>
+            <h3>Japanese captivity (Saipan)</h3>
+            <div class="badge">Rejected by Japanese archives</div>
+          </summary>
+          <div class="inner">
+            <div class="theory-meta">
+              <div><span>Geographic attribution</span><b>Mili / Jaluit Atoll → Saipan Island</b></div>
+              <div><span>Authors and versions</span><b>F. Goerner (1966), M. Campbell, History Channel (2017)</b></div>
+            </div>
+            <p>Claims that the off-course aircraft turned northwest toward the Japanese-mandated Marshall Islands, made a forced landing near Mili Atoll, after which Japanese military forces detained Earhart and Noonan as American spies and transported them to Saipan, where they died in captivity.</p>
+            <div class="ev-grid">
+              <div class="ev pro"><h4>Facts and evidence «FOR»</h4><ol>
+                <li>Dozens of accounts recorded in the 1944–1960s by Marshall Islanders about a «white woman pilot in men's clothing».</li>
+                <li>Testimony of 1944 Marines about papers and a burnt twin-engine aircraft they supposedly saw.</li>
+              </ol></div>
+              <div class="ev con"><h4>Counterarguments</h4><ol>
+                <li>Mili Atoll is almost 800 miles from Howland, whereas at 07:42–08:43 «Itasca» was receiving a signal of near-range S5 strength.</li>
+                <li>Captured archives of the Imperial Japanese Navy and Foreign Ministry contain no mention whatsoever; moreover, the Japanese survey ship «Kosyu» itself helped the US in the search.</li>
+                <li>The «photograph on the Jaluit pier» (2017) turned out to have been printed in a Japanese guidebook back in 1935.</li>
+              </ol></div>
+            </div>
+            <div class="verdict"><b>Final conclusion of the archival examination</b>A vivid product of the WWII Pacific atmosphere that does not withstand verification by «Itasca» radiotelemetry or by Japanese state archives.</div>
+          </div>
+        </details>
+        <details class="theory">
+          <summary>
+            <div class="row"><span>HYPOTHESIS IV</span><em style="color:#B83A2D;border-color:rgba(184,58,45,.35)">0% credibility</em></div>
+            <h3>The identity-switch myth</h3>
+            <div class="badge">Documentarily disproven</div>
+          </summary>
+          <div class="inner">
+            <div class="theory-meta">
+              <div><span>Geographic attribution</span><b>New Jersey, USA (the myth of a 1970 book)</b></div>
+              <div><span>Authors and versions</span><b>J. Gervais and J. Klaas («Amelia Earhart Lives», 1970)</b></div>
+            </div>
+            <p>A sensational Cold War-era version: the round-the-world flight was cover for aerial photography of Japanese fortifications on orders from President Roosevelt, and after the war the surviving Amelia was secretly brought to the US and lived out her life under the name of the banker Irene Craigmile Bolam.</p>
+            <div class="ev-grid">
+              <div class="ev pro"><h4>Facts and evidence «FOR»</h4><ol>
+                <li>The physical resemblance of the elderly Irene Bolam to a 1965 photograph, and the fact that she too held a private pilot's license.</li>
+              </ol></div>
+              <div class="ev con"><h4>Counterarguments</h4><ol>
+                <li>Bolam filed a $1.5 million libel suit, presenting her biography, birth and marriage certificates from the 1930s.</li>
+                <li>The publisher McGraw-Hill immediately withdrew the print run; a forensic facial comparison excluded a match.</li>
+                <li>The civilian Electra carried no reconnaissance aerial cameras, and the route stayed hundreds of miles clear of Japanese waters.</li>
+              </ol></div>
+            </div>
+            <div class="verdict"><b>Final conclusion of the archival examination</b>A classic example of media mythologization of a 20th-century tragedy, definitively refuted by forensic-anthropological examination and documentary evidence.</div>
+          </div>
+        </details>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption class="mono" style="caption-side:top;text-align:left;padding:10px 13px;font-size:.72rem;color:#8C857B;background:#FCF9F2;border-bottom:1px solid #D8D0C0">
+            TABLE 2. SUMMARY EVIDENCE MATRIX ACROSS THE FOUR HYPOTHESES
+          </caption>
+          <thead>
+            <tr><th>Verification criterion</th><th>I. Sinking</th><th>II. Nikumaroro</th><th>III. Marshall Islands</th><th>IV. Secret mission</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>S5 signal strength at 07:42–08:43</b></td>
+              <td style="color:#2E5A44"><b>Fully consistent:</b> the aircraft was within 25–65 miles of Howland.</td>
+              <td style="color:#2E5A44"><b>Consistent:</b> in the morning the aircraft was at Howland, then headed SE along the 157° line.</td>
+              <td style="color:#B83A2D"><b>Contradicts:</b> S5 from 750+ miles on a 50-watt transmitter is impossible.</td>
+              <td style="color:#B83A2D"><b>Contradicts:</b> the route never passed over Japanese bases.</td></tr>
+            <tr><td><b>The phrase «We are on the line 157–337»</b></td>
+              <td>Search for Howland along the sun line until the engines stopped over water.</td>
+              <td style="color:#2E5A44"><b>Direct hit:</b> azimuth 157° leads exactly to the Phoenix Islands and Nikumaroro reef.</td>
+              <td style="color:#B83A2D">A 700-mile turnback against remaining fuel is inexplicable.</td>
+              <td style="color:#5A554C">Ignores Noonan's actual celestial navigation.</td></tr>
+            <tr><td><b>Post-crash signals, July 2–6</b></td>
+              <td style="color:#8A5A10">Treats all 120 messages as false amateur-radio interference.</td>
+              <td style="color:#2E5A44"><b>Explains:</b> transmitter operation from the dried reef during nighttime low tide.</td>
+              <td style="color:#B83A2D">Under Japanese capture, radio transmissions would have been immediately suppressed.</td>
+              <td style="color:#B83A2D">Has no explanation.</td></tr>
+            <tr><td><b>Physical finds and archives</b></td>
+              <td>Wreckage at 5,200 m depth has not yet been found by sonar (search continues).</td>
+              <td>Discovery of 13 bones, a sextant box, and women's shoes (1940, British archives).</td>
+              <td style="color:#B83A2D">Japanese Navy and Foreign Ministry archives contain not a single trace.</td>
+              <td style="color:#B83A2D">Disproven in court by Irene Bolam's documents (1970).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- ================= 5. CREW ================= -->
+  <section class="chapter" id="legacy">
+    <div class="wrap">
+      <span class="tag" style="color:#1D3557">Sheet No. 05 • Crew of NR16020 and the expedition's legacy</span>
+      <h2>Two over the ocean: the people at the yoke and the sextant</h2>
+      <div class="crew" style="margin-top:28px">
+        <article>
+          <div class="head"><b>Crew commander • pilot</b><span>Jul 24, 1897 — missing Jul 2, 1937</span></div>
+          <h3>Amelia Mary Earhart</h3>
+          <p class="sub">Native of Atchison, Kansas • FAI license No. 6017 • first woman to fly the Atlantic solo (1932)</p>
+          <p>By the summer of 1937, the 39-year-old Amelia Earhart already held a unique series of transoceanic records: solo flights Newfoundland–Ireland (1932), Honolulu–Oakland (1935), and Mexico City–New York. A lecturer and aeronautics consultant at Purdue University, the first president of the women pilots' organization «The Ninety-Nines».</p>
+          <p>Unlike earlier round-the-world flights, which ran in northern latitudes along a shortened arc, Earhart set the goal of circling the Earth as close to the equator as possible — along the route of a full planetary circumference of 47,000 kilometers.</p>
+        </article>
+        <article>
+          <div class="head"><b>Navigator</b><span>Apr 4, 1893 — missing Jul 2, 1937</span></div>
+          <h3>Frederick Joseph Noonan</h3>
+          <p class="sub">Chicago native • master mariner • chief navigator of Pan American Airways' Pacific routes</p>
+          <p>One of the most experienced aerial navigators of the 1930s. Beginning his career as a sailor on square-riggers at the age of 12 and rising to master of a merchant ship, Noonan developed the celestial routes of the famous Martin M-130 «China Clipper» flying boats from San Francisco to Manila.</p>
+          <p>His professionalism was proven over 35,400 kilometers of the route: he unerringly guided the Electra across the South Atlantic, the deserts of Africa, and the monsoons of India, and at dawn on July 2 he computed an accurate solar line of position of 157°–337° that passed directly through the Howland area.</p>
+        </article>
+      </div>
+      <div class="quote">
+        <blockquote>«Please know that I am aware of the hazards. I want to do it because I want to do it. Women must try to do things as men have tried. When they fail, their failure must be but a challenge to others.»</blockquote>
+        <div class="sign">— From Amelia Earhart's letter to her husband George Palmer Putnam on the eve of a dangerous flight</div>
+      </div>
+      <div class="legacy">
+        <article class="card exp">
+          <h4>Modern deep-water searches (1999–2025)</h4>
+          <p><b style="color:#1C1B18">Nauticos expeditions (2002, 2006, 2017):</b> using autonomous underwater vehicles, more than 6,200 square kilometers of seabed have been surveyed west and northwest of Howland Island at depths up to 5,500 meters. The Electra's wreckage has not yet been found, but the steep underwater slopes of the Howland reef itself remain unexplored.</p>
+          <p style="margin-bottom:0"><b style="color:#1C1B18">Deep Sea Vision sonar anomaly (2024):</b> the Hugin 6000 vehicle recorded a cross-shaped echo 100 miles west of Howland, resembling the silhouette of a twin-tail aircraft. A follow-up optical dive in November 2024 established that the object is a natural geological rock formation. The mystery of aircraft NR16020 remains unsolved.</p>
+        </article>
+        <article class="card src">
+          <h4>Archival primary sources of the dossier</h4>
+          <ul>
+            <li>Radio watch log of the US Coast Guard cutter USCGC «Itasca» (US National Archives, NARA, July 1937).</li>
+            <li>Search operation report of USS «Colorado» and USS «Lexington» (US Navy, 1937).</li>
+            <li>The Amelia Earhart Papers collection at Purdue University Archives.</li>
+            <li>Documents of the British Western Pacific colonial administration concerning Gardner Island / Nikumaroro (1940–1941).</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="t">The Disappearance of Amelia Earhart (1937)</div>
+      <p>All coordinates, radio frequencies, and excerpts from the watch log of USCGC «Itasca» are given in accordance with archival documents of the US Coast Guard and Navy of 1937. The document requires no network connection: simply save the file and open it in any browser.</p>
+    </div>
+    <div class="mono" style="font-size:.7rem;color:#5A554C;text-align:right">
+      AIRCRAFT NR16020 • CALL SIGN KHAQQ<br>LAST SIGNAL: 08:43, JULY 2, 1937
+    </div>
+  </div>
+</footer>
+</body>
+</html>
